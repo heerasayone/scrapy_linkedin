@@ -18,3 +18,4 @@ service-identity==16.0.0
 six==1.10.0
 Twisted==16.1.1
 w3lib==1.14.2
+scrapy-heroku==0.7.1
