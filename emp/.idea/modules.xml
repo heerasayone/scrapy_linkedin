@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../curbside-crawl/.idea/curbside-crawl.iml" filepath="$PROJECT_DIR$/../curbside-crawl/.idea/curbside-crawl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/emp.iml" filepath="$PROJECT_DIR$/.idea/emp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../employee_details/.idea/employee_details.iml" filepath="$PROJECT_DIR$/../employee_details/.idea/employee_details.iml" />
+    </modules>
+  </component>
+</project>
+
