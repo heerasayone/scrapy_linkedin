@@ -42,19 +42,7 @@ class Employee_details(scrapy.Spider):
 # cache-control:max-age=0
 #     }
 
-    def excecute_random_event_matrix(self):
-      self.driver = webdriver.Firefox()
-      url = "https://www.linkedin.com/"
-      self.driver.get(url)
-      event1 = self.driver.find_element_by_xpath('.//div[@class="link"]//ul//li/a')
-      event2 = self.driver.find_element_by_xpath('//ul[@class="nav-legal"]//li//a')
-      event3 = self.driver.find_element_by_xpath('//li[@class="lang-container"]//a')
-      event4 = self.driver.find_element_by_xpath('//li[@class="first"]//a')
-      events = [event1, event2, event3, event4]
-      random_event = random.choice(events)
-      random_event.click()
-      self.driver.close()
-#
+  
 # formdata={'session_key': 'inside.out4001@gmail.com', 'session_password': 'insideout4001',
 #                                   'csrfToken': csrftoken},
 
@@ -111,7 +99,7 @@ class Employee_details(scrapy.Spider):
 
 
     def parse_companies(self, response):
-        self.excecute_random_event_matrix()
+        #self.excecute_random_event_matrix()
         meta = response.meta.copy()
         company_list_json = re.search(r';\"><!--(.+)--></code>',response.body, re.DOTALL)
         if company_list_json:
@@ -142,7 +130,7 @@ class Employee_details(scrapy.Spider):
 
 
     def parse_single_company(self, response):
-        self.excecute_random_event_matrix()
+        #self.excecute_random_event_matrix()
         doc = html.fromstring(response.body)
         company_details_json = re.search(r'content\"><!--(.+?)--></code>',response.body)
         if company_details_json:
@@ -190,7 +178,7 @@ class Employee_details(scrapy.Spider):
 
 
     def parse_employee_listing_page(self, response):
-        self.excecute_random_event_matrix()
+        #self.excecute_random_event_matrix()
         meta = response.meta.copy()
         employee_list_json = re.search(r'\"results\"\:(.+)\,\"i18n_looking_for_someone\"',response.body, re.DOTALL)
         if employee_list_json:
@@ -232,7 +220,7 @@ class Employee_details(scrapy.Spider):
 
 
     def parse_employees(self, response):
-        self.excecute_random_event_matrix()
+        #self.excecute_random_event_matrix()
         self.i=self.i+1
 
         doc = html.fromstring(response.body)
